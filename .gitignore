@@ -1,4 +1,4 @@
 .idea/
 venv/
 Lessons/
-Homeworks/Chinook_Sqlite.sqlite
+*.sqlite
