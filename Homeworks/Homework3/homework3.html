@@ -1,0 +1,139 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Database designs">
+    <meta name="author" content="Rok Krivičič">
+    <link rel="stylesheet" href="homework3.css">
+    <title>Database designs</title>
+</head>
+<body>
+<div>
+    <h1>Database design</h1>
+</div>
+<div>
+    <h2>Blog</h2>
+</div>
+<div class="container">
+    <div class="square">
+        <div class="header">Article</div>
+        <div>
+            <ul>
+                <li>id (INTEGER, PK) </li>
+                <li>name (TEXT)</li>
+                <li>author_id (INTEGER, FK)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="square2"><span class="arrow">&#8594;</span></div>
+    <div class="square">
+        <div class="header">Author</div>
+        <div>
+            <ul>
+                <li>id (INTEGER, PK) </li>
+                <li>first_name (TEXT)</li>
+                <li>last_name (TEXT)</li>
+                <li>allow_to_post (BOOLEAN)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="square2"><span class="arrow">&#8592;</span></div>
+    <div class="square">
+        <div class="header">Comment</div>
+        <div>
+            <ul>
+                <li>id (INTEGER, PK) </li>
+                <li>text (TEXT)</li>
+                <li>author_id (INTEGER, FK)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div>
+    <h2>Movie database</h2>
+</div>
+</div>
+<div class="container">
+    <div class="square">
+        <div class="header">Film Studio</div>
+        <div>
+            <ul>
+                <li>id (INTEGER, PK) </li>
+                <li>name (TEXT)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="square2"><span class="arrow">&#8594;</span></div>
+    <div class="square">
+        <div class="header">Movie</div>
+        <div>
+            <ul>
+                <li>id (INTEGER, PK) </li>
+                <li>name (TEXT)</li>
+                <li>film_studio_id (INTEGER,FK)</li>
+                <li>genre_id (INTEGER,FK)</li>
+                <li>allow_to_post (BOOLEAN)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="square2"><span class="arrow">&#8592;</span></div>
+    <div class="square">
+        <div class="header">Genre</div>
+        <div>
+            <ul>
+                <li>id (INTEGER, PK) </li>
+                <li>name (TEXT)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container2">
+    <div class="square3"><span class="arrow">&#8599;</span></div>
+    <div class="square3"><span class="arrow">&#8598;</span></div>
+</div>
+<div class ="container">
+    <div class="square">
+        <div class="header">Actor</div>
+        <div>
+            <ul>
+                <li>id (INTEGER, PK) </li>
+                <li>name (TEXT)</li>
+                <li>last_name (TEXT)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="square3"><span class="arrow">&#8594;</span></div>
+    <div class="square">
+        <div class="header2">Movies_actors</div>
+        <div>
+            <ul>
+                <li>id (INTEGER, PK) </li>
+                <li>movie_id (INTEGER, FK)</li>
+                <li>actor_id (INTEGER, FK)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="square3"></div>
+    <div class="square">
+        <div class="header2">Movies_directors</div>
+        <div>
+            <ul>
+                <li>id (INTEGER, PK) </li>
+                <li>movie_id (INTEGER, FK)</li>
+                <li>director_id (INTEGER, FK)</li>
+            </ul>
+        </div>
+    </div>
+    <div class="square3"><span class="arrow">&#8592;</span></div>
+    <div class="square">
+        <div class="header">Director</div>
+        <div>
+            <ul>
+                <li>id (INTEGER, PK) </li>
+                <li>name (TEXT)</li>
+                <li>last_name (TEXT)</li>
+            </ul>
+        </div>
+    </div>
+</div>
+</body>
+</html>
